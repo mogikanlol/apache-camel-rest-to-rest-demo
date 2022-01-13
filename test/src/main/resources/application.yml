@@ -1,0 +1,5 @@
+camel:
+  servlet:
+    mapping:
+      # https://camel.apache.org/components/3.13.x/servlet-component.html
+      context-path: /camel/*
