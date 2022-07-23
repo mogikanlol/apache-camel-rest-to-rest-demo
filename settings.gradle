@@ -1,4 +1,15 @@
+//https://docs.gradle.org/current/javadoc/org/gradle/api/initialization/Settings.html#include-java.lang.String...-
 
-include 'test',
+include 'camel-proxy',
         'client',
         'server'
+project(':camel-proxy').projectDir = file('app/camel-proxy')
+project(':client').projectDir = file('app/client')
+project(':server').projectDir = file('app/server')
+
+/*
+file('app').eachDir {dir ->
+    include dir.name
+    project(":${dir.name}").projectDir = dir
+}
+*/
